@@ -1,5 +1,5 @@
 # Mechanical_Inchworm
-Experience robotics in action with our Mechanical Inchworm project! Using 3D-printed parts and Arduino control, this setup replicates the unique movement of an inchworm. The repository includes CAD files, Arduino code, and a demo video. Explore servo control and mechanics through this engaging project! This project features a mechanical inchworm powered by three servo motors, designed to mimic the crawling motion of an inchworm. Utilizing a combination of 3D-printed parts, basic hardware, and Arduino control, this system imitates the distinctive movement of an inchworm through a series of coordinated actions.
+Using 3D-printed parts and Arduino control, this setup replicates the unique movement of an inchworm. The repository includes CAD files, Arduino code, and a demo video. This project features a mechanical inchworm powered by three servo motors, designed to mimic the crawling motion of an inchworm. Utilizing a combination of 3D-printed parts, basic hardware, and Arduino control, this system imitates the distinctive movement of an inchworm through a series of coordinated actions.
 
 ## Components
 
