@@ -1,0 +1,56 @@
+#include <Servo.h>
+
+Servo myServo1; // Create a servo object to control a servo motor
+Servo myServo2;
+Servo myServo3;
+char serialData; // Variable to store incoming serial data
+
+void setup() {
+  Serial.begin(9600); // Initialize serial communication
+  myServo1.attach(8); // Attach the servo to pin 8
+  myServo2.attach(10);
+  myServo3.attach(4);
+
+  myServo1.write(0);
+  myServo2.write(180);
+  myServo3.write(0);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    serialData = Serial.read(); // Read serial data
+
+    if (serialData == 'c') {
+      myServo1.write(90); // Move the servo to position 180 degrees
+    } else if (serialData == 'r') {
+      myServo1.write(0); // Move the servo to position 0 degrees
+    }
+
+    if (serialData == 'd') {
+      myServo2.write(180); // Move the servo to position 180 degrees
+    } else if (serialData == 'u') {
+      myServo2.write(110); // Move the servo to position 0 degrees
+    }
+
+    if (serialData == 'a') {
+      myServo3.write(0); // Move the servo to position 180 degrees
+    } else if (serialData == 'b') {
+      myServo3.write(95); // Move the servo to position 0 degrees
+    }
+
+    //Automatic working=> comment the below if you wish to control manually//
+    myServo2.write(110);
+    delay(1000);
+    myServo1.write(90);
+    delay(1000);
+    myServo2.write(180);
+    delay(1000);
+    myServo3.write(110);//crit
+    delay(1000);
+    myServo1.write(0);
+    delay(1000);
+    myServo3.write(0);
+    delay(1000);
+
+  }
+}
